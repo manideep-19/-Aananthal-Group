@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Outfit } from "next/font/google";
+import { Inter } from "next/font/google"; // iOS-like clean font
 import "./globals.css";
 import { cn } from "@/lib/utils";
 
-const outfit = Outfit({
+const inter = Inter({
   variable: "--font-sans",
   subsets: ["latin"],
   display: "swap",
@@ -29,7 +29,7 @@ export default function RootLayout({
       <body
         className={cn(
           "min-h-screen bg-background font-sans text-foreground antialiased",
-          outfit.variable
+          inter.variable
         )}
       >
         <Navbar />

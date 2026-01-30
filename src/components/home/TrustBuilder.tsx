@@ -33,21 +33,21 @@ const features = [
 
 export function TrustBuilder() {
     return (
-        <section className="py-24 bg-white overflow-hidden">
+        <section className="py-24 bg-transparent overflow-hidden">
             <Container>
                 <div className="flex flex-col md:flex-row gap-12 items-start md:items-center mb-16">
                     <div className="flex-1 max-w-2xl">
                         <motion.h2
-                            className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl mb-4"
+                            className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-4"
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5 }}
                         >
-                            Why Leading Industries Trust <span className="text-blue-600">Aananthal</span>
+                            Why Leading Industries Trust <span className="text-blue-500">Aananthal</span>
                         </motion.h2>
                         <motion.p
-                            className="text-lg text-slate-600 leading-relaxed"
+                            className="text-lg text-slate-400 leading-relaxed"
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
@@ -62,19 +62,19 @@ export function TrustBuilder() {
                     {features.map((feature, index) => (
                         <motion.div
                             key={index}
-                            className="group p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-xl hover:shadow-slate-200/50 hover:border-blue-100 transition-all duration-300"
+                            className="group p-8 rounded-3xl glass-card border border-white/10 hover:bg-white/10 hover:shadow-[0_0_20px_rgba(59,130,246,0.15)] hover:border-blue-500/30 transition-all duration-300"
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                         >
-                            <div className={`h-14 w-14 rounded-2xl bg-white shadow-sm flex items-center justify-center mb-6 border border-slate-100 group-hover:scale-110 transition-transform duration-300 text-${feature.color}-600`}>
+                            <div className={`h-14 w-14 rounded-2xl bg-white/5 shadow-inner flex items-center justify-center mb-6 border border-white/10 group-hover:scale-110 transition-transform duration-300 text-${feature.color}-400`}>
                                 <feature.icon className="h-7 w-7" />
                             </div>
-                            <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
+                            <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
                                 {feature.title}
                             </h3>
-                            <p className="text-slate-500 leading-relaxed">
+                            <p className="text-slate-400 leading-relaxed">
                                 {feature.description}
                             </p>
                         </motion.div>

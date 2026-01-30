@@ -16,8 +16,21 @@ import { WelcomeSplash } from "@/components/layout/WelcomeSplash";
 export default function Home() {
   const [showSplash, setShowSplash] = useState(true);
 
+  useEffect(() => {
+    // Check if splash has already been shown in this session
+    const hasSeenSplash = sessionStorage.getItem("splashSeen");
+    if (hasSeenSplash) {
+      setShowSplash(false);
+    }
+  }, []);
+
+  const handleSplashComplete = () => {
+    sessionStorage.setItem("splashSeen", "true");
+    setShowSplash(false);
+  };
+
   if (showSplash) {
-    return <WelcomeSplash onComplete={() => setShowSplash(false)} />;
+    return <WelcomeSplash onComplete={handleSplashComplete} />;
   }
 
   return (
