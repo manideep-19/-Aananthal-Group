@@ -40,9 +40,6 @@ export function Navbar() {
                 <div className="flex h-20 items-center justify-between">
                     {/* Logo */}
                     <Link href="/" className="flex items-center gap-2 group">
-                        <div className="h-8 w-8 bg-blue-600 rounded-br-xl rounded-tl-xl flex items-center justify-center group-hover:bg-blue-500 transition-colors shadow-[0_0_15px_rgba(37,99,235,0.5)]">
-                            <span className="text-white font-bold text-xl">A</span>
-                        </div>
                         <span className={cn(
                             "text-2xl font-bold tracking-tight transition-colors text-white",
                         )}>

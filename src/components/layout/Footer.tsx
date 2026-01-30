@@ -9,9 +9,6 @@ export function Footer() {
                     {/* Brand Column */}
                     <div className="md:col-span-2 space-y-6">
                         <Link href="/" className="flex items-center gap-2 group mb-4">
-                            <div className="h-8 w-8 bg-blue-600 rounded-br-xl rounded-tl-xl flex items-center justify-center group-hover:bg-blue-500 transition-colors shadow-[0_0_15px_rgba(37,99,235,0.5)]">
-                                <span className="text-white font-bold text-xl">A</span>
-                            </div>
                             <h2 className="text-2xl font-bold tracking-tight text-white">Aananthal Group</h2>
                         </Link>
                         <p className="text-slate-400 max-w-sm leading-relaxed">
