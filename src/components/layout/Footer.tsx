@@ -24,13 +24,18 @@ export function Footer() {
                     <div className="space-y-6">
                         <h3 className="font-semibold text-lg text-white">Quick Links</h3>
                         <ul className="space-y-4">
-                            {["Products", "Industries", "Technology", "About Us"].map((item) => (
-                                <li key={item}>
+                            {[
+                                { label: "Products", href: "/products" },
+                                { label: "Industries", href: "/industries" },
+                                { label: "Technology", href: "/technology" },
+                                { label: "About Us", href: "/about" },
+                            ].map((item) => (
+                                <li key={item.label}>
                                     <Link
-                                        href={`/${item.toLowerCase().replace(" ", "-")}`}
+                                        href={item.href}
                                         className="text-slate-400 hover:text-white hover:translate-x-1 transition-all inline-block"
                                     >
-                                        {item}
+                                        {item.label}
                                     </Link>
                                 </li>
                             ))}
@@ -43,14 +48,20 @@ export function Footer() {
                         <ul className="space-y-4 text-slate-400">
                             <li>
                                 <span className="block text-white mb-1 font-medium">Sales & Enquiries</span>
-                                aananthaltechnologies@gmail.com
+                                <a href="mailto:aananthaltechnologies@gmail.com" className="hover:text-white transition-colors">
+                                    aananthaltechnologies@gmail.com
+                                </a>
                             </li>
                             <li>
                                 <span className="block text-white mb-1 font-medium">Headquarters</span>
                                 Plot No. 123, Industrial Area,<br />
                                 Bangalore, Karnataka - 560001
                             </li>
-                            <li className="text-white font-medium">+91 73869 90245</li>
+                            <li>
+                                <a href="tel:+917386990245" className="text-white font-medium hover:text-slate-200 transition-colors">
+                                    +91 73869 90245
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
