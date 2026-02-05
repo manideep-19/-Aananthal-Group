@@ -45,8 +45,8 @@ export function Footer() {
                             </li>
                             <li>
                                 <span className="block text-white mb-1">Headquarters</span>
-                                Plot No. 123, Industrial Area,<br />
-                                Bangalore, Karnataka - 560001
+                                Rajanna Building,
+Horamavu Agara, Horamavu, Bengaluru, Karnataka 560043,<br />
                             </li>
                             <li>+91 77955 59724</li>
                         </ul>
